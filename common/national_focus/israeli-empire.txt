@@ -66,7 +66,7 @@ focus_tree = {
 		}
 	}
 	
-	#The Future Awaits!
+	#The Future Awaits
 	focus = {
 		id = ISR_the_future_awaits
 		icon = Generic
@@ -79,7 +79,8 @@ focus_tree = {
 		prerequisite = { focus = ISR_develop_davids_administration  }
 		mutually_exclusive = { focus = ISR_he_must_die  }
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 120
+
 			
 		}
 	}
@@ -105,10 +106,14 @@ focus_tree = {
 				ideology = marxism
 				traits = {  }
 			}
-			add_popularity = { 
-			ideology = communism 
-			popularity = 0.25 
-			}
+			add_popularity = { 
+
+			ideology = communism 
+
+			popularity = 0.25 
+
+			}
+
 			
 		}
 	}
@@ -126,15 +131,23 @@ focus_tree = {
 		prerequisite = { focus = ISR_develop_davids_administration  }
 		mutually_exclusive = { focus = ISR_the_future_awaits  }
 		completion_reward = {
-			kill_country_leader = yes
+			kill_country_leader = yes
+
 			add_stability = -0.10
-			
-			create_country_leader = {
-				name = "Military Government"
-				expire = '1965.1.1' 
-				ideology = fascism 
-			traits = {
-			}
+			
+
+			create_country_leader = {
+
+				name = "Military Government"
+
+				expire = '1965.1.1' 
+
+				ideology = fascism 
+
+			traits = {
+
+			}
+
 			 }
 			release = SYR
 				if = {
@@ -167,7 +180,8 @@ focus_tree = {
 							target = EGY
 							autonomous_state = free
 					}
-				}
+				}
+
 			
 		}
 	}
@@ -185,15 +199,24 @@ focus_tree = {
 		prerequisite = { focus = ISR_he_must_die  }
 		mutually_exclusive = { focus = ISR_a_new_figure  }
 		completion_reward = {
-			add_popularity = { 
-			ideology = democratic
-			popularity = 0.15 
-			}add_popularity = { 
-			ideology = neutrality 
-			popularity = 0.15 
-			}
-			add_political_power = 50
-			add_stability = 0.05
+			add_popularity = { 
+
+			ideology = democratic
+
+			popularity = 0.15 
+
+			}add_popularity = { 
+
+			ideology = neutrality 
+
+			popularity = 0.15 
+
+			}
+
+			add_political_power = 50
+
+			add_stability = 0.05
+
 			
 		}
 	}
@@ -209,10 +232,15 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
-			454 = {
-			add_building_construction = {						type = infrastructure						level = 2
-			instant_build = yes					}
-			add_manpower = 25000
+			454 = {
+
+			add_building_construction = {						type = infrastructure						level = 2
+
+			instant_build = yes					}
+
+
+			add_manpower = 25000
+
 			
 		}
 	}
