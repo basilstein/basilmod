@@ -1,0 +1,28 @@
+ideas = {
+
+	country = {
+		pan-african_propaganda = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = yes
+			}
+			available = {
+
+			}
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				pan-african_theocratic_monarchism_drift = 0.15
+			}
+		}
+	}
+}
