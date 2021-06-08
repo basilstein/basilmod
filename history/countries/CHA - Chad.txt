@@ -65,7 +65,7 @@ set_popularities = {
 	fascism = 0
 	communism = 5
 	neutrality = 20
-	pan-african theocratic monarchism = 5
+	pan-african_theocratic_monarchism = 5
 	democratic_anarchism = 0
 }
 
