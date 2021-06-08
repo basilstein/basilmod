@@ -1,21 +1,5 @@
 ﻿l_english: 
 
- IRE_fascism:0 "Irish Martial State"
- IRE_fascism_DEF:0 "the Irish Martial State"
- IRE_democratic:0 "Irish Social Democratic Paradise"
- IRE_democratic_DEF:0 "Irish Social Democratic Paradise"
- IRE_neutrality:0 "Éire"
- IRE_neutrality_DEF:0 "Éire"
- IRE_communism:0 "Irish Communist Republic"
- IRE_communism_DEF:0 "the Irish Communist Republic"
- IRE_fascism_ADJ:0 "Irish"
- IRE_democratic_ADJ:0 "Irish"
- IRE_neutrality_ADJ:0 "Irish"
- IRE_communism_ADJ:0 "Irish"
- IRE:0 "Ireland"
- IRE_DEF:0 "Ireland"
- IRE_ADJ:0 "Irish"
-
 IRE_a_visit_to_ross_crae:0 "A Visit to Ross Crae"
 IRE_a_visit_to_ross_crae_desc:0 "What can we learn from Philomena Lee's story?(Which won't happen for 20 years)"
 IRE_just_found_out_about_catholicism:0 "Just Found Out About Catholicism...Damn, That Shit Sucks"
