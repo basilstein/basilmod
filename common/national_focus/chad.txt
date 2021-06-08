@@ -46,7 +46,7 @@ focus_tree = {
 		completion_reward = {
 			515 = {
 				add_core_of = CHA
-				owner = CHA
+				set_owner = CHA
 			}
 		}
 	}
@@ -55,9 +55,8 @@ focus_tree = {
 	focus = {
 		id = CHA_stage_two
 		icon = Generic
-		x = 0
-		y = 1
-		relative_position_id = {focus = CHA_stage_one}
+		x = 9
+		y = 3
 		cost = 5
 		prerequisite = {focus = CHA_stage_one}
 		search_filters = {
@@ -79,9 +78,8 @@ focus_tree = {
 	focus = {
 		id = CHA_make_contact_algerians
 		icon = Generic
-		x = 1
-		y = 1
-		relative_position_id = {focus = CHA_plan_scipio}
+		x = 11
+		y = 2
 		cost = 5
 		prerequisite = {focus = CHA_plan_scipio}
 		search_filters = {
