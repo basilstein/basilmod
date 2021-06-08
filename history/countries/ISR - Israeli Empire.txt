@@ -1,0 +1,87 @@
+﻿oob = "ISR_1936"
+capital = 454
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.3
+set_convoys = 230
+create_faction = "Alliance of Solomon"
+
+
+add_ideas = {
+	low_economic_mobilisation
+}
+
+
+#For start date 1939.1.1
+1939.1.1 = {
+	add_political_power = 1000
+	oob = "ISR_1939"
+}
+
+#Politics for 1936.1.1
+set_politics = {
+	ruling_party = fascism
+	last_election = "1935.5.12"
+	election_frequency = 120
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 15
+	fascism = 55
+	communism = 15
+	neutrality = 15
+	democratic_anarchism = 5
+}
+
+#Politics for 1939.1.1
+1939.1.1 = {
+	set_popularities = {
+		democratic = 25
+		fascism = 25
+		communism = 25
+		neutrality = 25
+	}
+}
+
+#Create country leader - Ayman Odeh
+create_country_leader = {
+	name = "Ayman Odeh"
+	#Custom image for Ayman Odeh
+	picture = "aymanodeh.jpg"
+	expire = "1965.1.1"
+	ideology = socialism
+}
+
+#Create country leader - Netanyahu Clone #69
+create_country_leader = {
+	name = "Netanyahu Clone #69"
+	#Custom image for Netanyahu Clone #69
+	picture = "netanyahuclone69.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {  }
+}
+
+#Create country leader - David Sokolov-Hill
+create_country_leader = {
+	name = "David Sokolov-Hill"
+	#Custom image for David Sokolov-Hill
+	picture = "davidsokolov.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {  }
+}
+
+#Create military leader - Basil Stein
+create_corps_commander = {
+	name = "Basil Stein"
+	#Custom image for Basil Stein
+	picture = "basil_stein-26640.dds"
+	traits = { brilliant_strategist politically_connected war_hero media_personality logistics_wizard }
+	skill = 9
+	attack_skill = 10
+	defense_skill = 8
+	planning_skill = 7
+	logistics_skill = 7
+	id = 15538310
+}

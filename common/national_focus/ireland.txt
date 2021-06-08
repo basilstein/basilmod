@@ -1,0 +1,298 @@
+focus_tree = {
+	id = ireland
+	continuous_focus_position = { x = 0 y = 1000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IRE
+		}
+	}
+	
+
+	#A Visit to Ross Crae
+	focus = {
+		id = IRE_a_visit_to_ross_crae
+		icon = Generic
+		x = 5
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	#Just Found Out About Catholicism, That Shit Sucks Dude
+	focus = {
+		id = IRE_just_found_out_about_catholicism
+		icon = Generic
+		x = 4
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IRE_a_visit_to_ross_crae }
+		mutually_exclusive = { focus = IRE_emphasize_tolerance  }
+		completion_reward = {
+			add_stability = -0.10
+			add_popularity{
+				ideology = neutrality
+				popularity = -.15
+				}
+		}
+	}
+	#Expose Pedophiles in the Church
+	focus = {
+		id = IRE_expose_pedophiles
+		icon = Generic
+		x = 2
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IRE_just_found_out_about_catholicism }
+		completion_reward = {
+			add_popularity{
+				ideology = neutrality
+				popularity = .03
+				}
+			add_stability = -.02
+			
+		}
+	}
+	#Seize Church Land
+	focus = {
+		id = IRE_seize_church_land
+		icon = Generic
+		x = 2
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IRE_expose_pedophiles }
+		completion_reward = {
+			add_popularity{
+				ideology = neutrality
+				popularity = .03
+				}
+			add_stability = -.02
+			134 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			135 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	#End of an Era
+	focus = {
+		id = IRE_end_of_an_era
+		icon = Generic
+		x = 4
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IRE_seize_church_land }
+		completion_reward = {
+			add_popularity{
+				ideology = neutrality
+				popularity = .05
+				}
+			add_stability = .08
+			
+		}
+	}
+	#Emphasize Tolerance
+	focus = {
+		id = IRE_emphasize_tolerance
+		icon = Generic
+		x = 6
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IRE_a_visit_to_ross_crae }
+		mutually_exclusive = { focus = IRE_just_found_out_about_catholicism  }
+		completion_reward = {
+			add_popularity{
+				ideology = neutrality
+				popularity = .5
+				}
+			add_stability = 0.05
+			
+		}
+	}
+	#Urban Clergy
+	focus = {
+		id = IRE_urban_clergy
+		icon = Generic
+		x = 6
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = IRE_a_visit_to_ross_crae }
+		mutually_exclusive = { focus = IRE_just_found_out_about_catholicism  }
+		completion_reward = {
+			add_stability = 0.05
+			113 = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+				}
+			}
+			119 = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+				}
+			}
+			
+		}
+	}
+	#Unite the Country
+	focus = {
+		id = IRE_unite_the_country
+		icon = Generic
+		x = 5
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = IRE_end_of_an_era
+			focus = IRE_urban_clergy
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			113 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
+			}
+			
+		}
+		
+	}
+	#I always believed in you David
+	focus = {
+		id = IRE_i_always_believed
+		icon = Generic
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = IRE_unite_the_country
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = IRE_unite_the_country
+		}
+		mutually_exclusive {
+			focus = IRE_fuck_them_both
+			focus = IRE_fine_perry_your_way
+		}
+		available = {
+			ISR = { has_completed_focus = ISR_the_future_awaits }
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			diplomatic_relation = { 
+				country = ISR
+				relation = non_aggression_pact 
+			}
+			
+		}
+		
+	}
+	#Fine Perry, We'll Do It Your Way
+	focus = {
+		id = IRE_fine_perry_your_way
+		icon = Generic
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = IRE_unite_the_country
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = IRE_unite_the_country
+		}
+		mutually_exclusive {
+			focus = IRE_fuck_them_both
+			focus = IRE_i_always_believed
+		}
+		available = {
+			ISR = { has_completed_focus = ISR_a_new_figure }
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			diplomatic_relation = { 
+				country = ISR
+				relation = non_aggression_pact 
+			}
+			
+		}
+		
+	}
+	#Fuck Them Both
+	focus = {
+		id = IRE_fuck_them_both
+		icon = Generic
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = IRE_unite_the_country
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = IRE_unite_the_country
+		}
+		mutually_exclusive {
+			focus = IRE_fine_perry_your_way
+			focus = IRE_i_always_believed
+		}
+		completion_reward = {
+			add_stability = .1
+			
+		}
+		
+	}
+	
+
+}

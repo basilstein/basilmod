@@ -1,0 +1,28 @@
+ideas = {
+	country = {
+
+		palestinian_opposition = {
+			picture = palestinian_opposition-26670
+			modifier = {
+				add_stability = -0.1
+
+			}
+		}
+
+		syrian_opposition = {
+			picture = syrian_opposition-26672
+			modifier = {
+				army_attack_factor = -.15
+				army_defence_factor = -.15
+			}
+		}
+
+		zionism_realized = {
+			picture = zionism_realized-26673
+			modifier = {
+				add_stability = 0.12
+				army_defence_factor = .1
+			}
+		}
+	}
+}

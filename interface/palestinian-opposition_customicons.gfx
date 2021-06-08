@@ -1,0 +1,21 @@
+spriteTypes = { 
+	##Icon For: Palestinian Opposition
+	SpriteType = { 
+		name = "palestinian_opposition-26670"
+		texturefile = "gfx/interface/ideas/palestinian-opposition-ideas/palestinian_opposition-26670.dds"
+	}
+
+	##Icon For: Syrian Opposition
+	SpriteType = { 
+		name = "syrian_opposition-26672"
+		texturefile = "gfx/interface/ideas/palestinian-opposition-ideas/syrian_opposition-26672.dds"
+	}
+
+	##Icon For: Zionism Realized
+	SpriteType = { 
+		name = "zionism_realized-26673"
+		texturefile = "gfx/interface/ideas/palestinian-opposition-ideas/zionism_realized-26673.dds"
+	}
+
+ 
+ }

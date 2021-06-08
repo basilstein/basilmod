@@ -1,0 +1,9 @@
+spriteTypes = { 
+	##Icon For: Eddie Storr-Desmond
+	SpriteType = { 
+		name = "wvXAoplY-1"
+		texturefile = "gfx/interface/ideas/wvXAoplY-1.dds"
+	}
+
+ 
+ }
