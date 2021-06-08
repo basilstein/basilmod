@@ -9,6 +9,9 @@ create_faction = "Alliance of Solomon"
 
 add_ideas = {
 	low_economic_mobilisation
+	palestinian_opposition
+	syrian_opposition
+	zionism_realized
 }
 
 
