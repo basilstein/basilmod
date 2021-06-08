@@ -34,11 +34,8 @@ focus_tree = {
 	focus = {
 		id = CHA_stage_one
 		icon = Generic
-		x = -1
-		y = 1
-		relative_position_id = { 
-			focus = CHA_plan_scipio
-		}
+		x = 9
+		y = 2
 		cost = 5
 		prerequisite = {
 			focus = CHA_plan_scipio
