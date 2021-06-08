@@ -152,7 +152,6 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = IRE_a_visit_to_ross_crae }
-		mutually_exclusive = { focus = IRE_just_found_out_about_catholicism  }
 		completion_reward = {
 			add_stability = 0.05
 			113 = {

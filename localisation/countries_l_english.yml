@@ -14,6 +14,7 @@
  GER:0 "Germany"
  GER_DEF:0 "Germany"
  GER_ADJ:0 "German"
+
  ENG_fascism:0 "British Empire"
  ENG_fascism_DEF:0 "the British Empire"
  ENG_democratic:0 "United Kingdom"
@@ -29,6 +30,7 @@
  ENG:0 "Britain"
  ENG_DEF:0 "Britain"
  ENG_ADJ:0 "British"
+ 
  SOV_fascism:0 "Russian Empire"
  SOV_fascism_DEF:0 "the Russian Empire"
  SOV_democratic:0 "Russian Federation"
@@ -2386,7 +2388,7 @@
  CHA:0 "Chad"
  CHA_DEF:0 "Chad"
  CHA_ADJ:0 "Chadian"
- 
+
  NGA_fascism:1 "Nigerian Military State"
  NGA_fascism_DEF:1 "Nigerian Military State"
  NGA_democratic:1 "Republic of Nigeria"

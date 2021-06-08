@@ -8,13 +8,160 @@ focus_tree = {
 			tag = CHA
 		}
 	}
-	
+	#expansion tree
+
+	#Plan Scipio
+	focus = {
+		id = CHA_plan_scipio
+		icon = Generic
+		x = 10
+		y = 1
+		cost = 10
+		available = {
+			threat > .12
+			has_government = pan-african_theocratic_monarchism
+		}
+		mutually_exclusive = {focus = CHA_plan_mto_congo}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			add_war_support = .1
+			add_named_threat = { threat = 1 name = "Plan Scipio" }
+		}
+	}
+	#Stage 1
+	focus = {
+		id = CHA_stage_one
+		icon = Generic
+		x = -1
+		y = 1
+		relative_position_id = {focus = CHA_plan_scipio}
+		cost = 5
+		prerequisite = {focus = CHA_plan_scipio}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			515 = {
+				add_core_of = CHA
+				owner = CHA
+			}
+		}
+	}
+
+	#stage 2
+	focus = {
+		id = CHA_stage_two
+		icon = Generic
+		x = 0
+		y = 1
+		relative_position_id = {focus = CHA_stage_one}
+		cost = 5
+		prerequisite = {focus = CHA_stage_one}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			782 = {
+				add_core_of = CHA
+				owner = CHA
+			}
+			514 = {
+				add_core_of = CHA
+				owner = CHA
+			}
+		}
+	}
+
+	#Make Contact with the Algerians
+	focus = {
+		id = CHA_make_contact_algerians
+		icon = Generic
+		x = 1
+		y = 1
+		relative_position_id = {focus = CHA_plan_scipio}
+		cost = 5
+		prerequisite = {focus = CHA_plan_scipio}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+
+	#Make Contact with the Libyans
+	focus = {
+		id = CHA_make_contact_libyans
+		icon = Generic
+		x = 0
+		y = 1
+		relative_position_id = {focus = CHA_make_contact_algerians}
+		cost = 5
+		prerequisite = {focus = CHA_make_contact_algerians}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			add_war_support =. 05
+		}
+	}
+	#Stage Border Incident
+	focus = {
+		id = CHA_stage_border_incident_libya
+		icon = Generic
+		x = -1
+		y = 1
+		relative_position_id = {focus = CHA_make_contact_algerians}
+		cost = 10
+		prerequisite = {focus = CHA_make_contact_algerians}
+		prerequisite = {focus = CHA_stage_two}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			FRA = {
+				declare_war_on = { 
+					target = ITA  
+					type = take_state_focus 
+					generator = { 448 449 450 451 661 662 663 273 }}
+			}
+			CHA = {
+				declare_war_on = { 
+					target = ITA  
+					type = take_state_focus 
+					generator = { 448 449 450 451 661 662 663 273 }}
+			}
+		}
+	}
+
+	#Plan Mto Congo
+	focus = {
+		id = CHA_plan_mto_congo
+		icon = Generic
+		x = 15
+		y = 1
+		cost = 10
+		available = {
+			threat > .5
+			has_government = pan-african_theocratic_monarchism
+		}
+		mutually_exclusive = {focus = CHA_plan_scipio}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			add_war_support = .5
+			add_named_threat = { threat = 1 name = "Plan Mto Congo" }
+		}
+	}
 
 	#Speak to Natives
 	focus = {
 		id = CHA_speak_to_natives
 		icon = Generic
-		x = 7
+		x = 2
 		y = 1
 		cost = 5
 		search_filters = {
@@ -66,6 +213,8 @@ focus_tree = {
 				ruling_party = pan-african_theocratic_monarchism
 				elections_allowed = no
 			}
+			add_political_power = 200
+			add_named_threat = { threat = 4 name = "African Awakening"
 			every_other_country = { 
 				add_opinion_modifier = { 
 					target = CHA 
@@ -105,8 +254,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = CHA_the_coup  }
+		prerequisite = { focus = CHA_feign_compliance  }
 		completion_reward = {
+			add_named_threat = { threat = -2 name = "Visit to Paris"
 			FRA = { 
 				add_opinion_modifier = { 
 					target = CHA 
@@ -201,8 +351,8 @@ focus_tree = {
 	focus = {
 		id = CHA_a_contemporary_capital
 		icon = Generic
-		x = 0
-		y = 1
+		x = 1
+		y = 0
 		relative_position_id = CHA_use_french_technology
 		cost = 10
 		search_filters = {
