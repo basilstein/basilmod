@@ -69,7 +69,7 @@ set_popularities = {
 	democratic_anarchism = 0
 }
 
-#Create country leader - Eddie Storr-Desmond
+#Create country leader - Eddie Storr-Desmond		Eddie sucks
 create_country_leader = {
 	name = "Eddie Storr-Desmond"
 	#Custom image for Eddie
