@@ -21,7 +21,7 @@ add_ideas = {
 	oob = "ISR_1939"
 }
 
-#Politics for 1936.1.1
+#Politics for 1936.1.1 Eddie sucks
 set_politics = {
 	ruling_party = fascism
 	last_election = "1935.5.12"
