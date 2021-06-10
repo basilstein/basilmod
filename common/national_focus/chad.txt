@@ -34,9 +34,10 @@ focus_tree = {
 	focus = {
 		id = CHA_stage_one
 		icon = Generic
-		x = 9
-		y = 2
+		x = -1
+		y = 1
 		cost = 5
+		relative_position_id = CHA_plan_scipio
 		prerequisite = {
 			focus = CHA_plan_scipio
 		}
@@ -55,9 +56,10 @@ focus_tree = {
 	focus = {
 		id = CHA_stage_two
 		icon = Generic
-		x = 9
-		y = 3
+		x = 0
+		y = 1
 		cost = 5
+		relative_position_id = CHA_stage_one
 		prerequisite = {focus = CHA_stage_one}
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
@@ -78,9 +80,10 @@ focus_tree = {
 	focus = {
 		id = CHA_make_contact_algerians
 		icon = Generic
-		x = 11
-		y = 2
+		x = 1
+		y = 1
 		cost = 5
+		relative_position_id = CHA_plan_scipio
 		prerequisite = {focus = CHA_plan_scipio}
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
@@ -96,7 +99,7 @@ focus_tree = {
 		icon = Generic
 		x = 0
 		y = 1
-		relative_position_id = {focus = CHA_make_contact_algerians}
+		relative_position_id = CHA_make_contact_algerians
 		cost = 5
 		prerequisite = {focus = CHA_make_contact_algerians}
 		search_filters = {
@@ -112,7 +115,7 @@ focus_tree = {
 		icon = Generic
 		x = -1
 		y = 1
-		relative_position_id = {focus = CHA_make_contact_algerians}
+		relative_position_id = CHA_make_contact_algerians
 		cost = 10
 		prerequisite = {focus = CHA_make_contact_algerians}
 		prerequisite = {focus = CHA_stage_two}
@@ -146,7 +149,7 @@ focus_tree = {
 			threat > .5
 			has_government = pan-african_theocratic_monarchism
 		}
-		mutually_exclusive = {focus = CHA_plan_scipio}
+		mutually_exclusive = CHA_plan_scipio
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
 		}
